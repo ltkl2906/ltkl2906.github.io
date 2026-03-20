@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Thi Khanh Linh – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <div class="nav-logo">LTKL</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#about"      data-vi="Về tôi"        data-en="About">Về tôi</a>
+    <a href="#experience" data-vi="Kinh nghiệm"   data-en="Experience">Kinh nghiệm</a>
+    <a href="#skills"     data-vi="Kỹ năng"        data-en="Skills">Kỹ năng</a>
+    <a href="#education"  data-vi="Học vấn"        data-en="Education">Học vấn</a>
+    <a href="#contact"    data-vi="Liên hệ"        data-en="Contact">Liên hệ</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div class="lang-toggle" id="langToggle">
+      <button class="lang-btn active" id="btnVI">VIE</button>
+      <button class="lang-btn"        id="btnEN">ENG</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-tag" data-vi="✦ Social Media Freelancer" data-en="✦ Social Media Freelancer">✦ Social Media Freelancer</div>
+    <h1 class="hero-name">Le Thi<br>Khanh Linh</h1>
+    <p class="hero-title" data-vi="Content · Social Media · Marketing" data-en="Content · Social Media · Marketing">Content · Social Media · Marketing</p>
+    <p class="hero-desc"
+       data-vi="Freelancer có kinh nghiệm triển khai nội dung trên Facebook, TikTok, Instagram; seeding và quản lý tương tác cộng đồng. Nền tảng giáo dục – du học – FMCG và AI, bắt trend nhanh, làm việc theo KPI."
+       data-en="Experienced Social Media Freelancer deploying content on Facebook, TikTok, and Instagram with community seeding and engagement management. Background in education, FMCG, and AI tech – trend-driven and KPI-focused.">
+      Freelancer có kinh nghiệm triển khai nội dung trên Facebook, TikTok, Instagram; seeding và quản lý tương tác cộng đồng. Nền tảng giáo dục – du học – FMCG và AI, bắt trend nhanh, làm việc theo KPI.
+    </p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn-primary" data-vi="Xem kinh nghiệm" data-en="View Experience">Xem kinh nghiệm</a>
+      <a href="#contact"    class="btn-outline"  data-vi="Liên hệ ngay"   data-en="Get in Touch">Liên hệ ngay</a>
+    </div>
+    <div class="hero-contacts">
+      <a href="tel:0349486455" class="contact-chip">
+        <i class="fas fa-phone"></i> 0349 486 455
+      </a>
+      <a href="mailto:klinh180802@gmail.com" class="contact-chip">
+        <i class="fas fa-envelope"></i> klinh180802@gmail.com
+      </a>
+      <span class="contact-chip">
+        <i class="fas fa-map-marker-alt"></i>
+        <span data-vi="Nhà Bè, TP. Hồ Chí Minh" data-en="Nha Be, Ho Chi Minh City">Nhà Bè, TP. Hồ Chí Minh</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual fade-in">
+      <div class="about-avatar-wrap">
+        <div class="about-avatar-ring"></div>
+        <div class="about-avatar-inner">
+          <div class="avatar-placeholder">
+            <i class="fas fa-user"></i>
+            <span>KHANH LINH</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-stats" style="position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:110%;">
+        <div class="stat-box">
+          <div class="stat-num">3+</div>
+          <div class="stat-label" data-vi="Năm kinh nghiệm" data-en="Years Exp.">Năm kinh nghiệm</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5+</div>
+          <div class="stat-label" data-vi="Thương hiệu" data-en="Brands">Thương hiệu</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3</div>
+          <div class="stat-label" data-vi="Nền tảng" data-en="Platforms">Nền tảng</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text fade-in" style="padding-bottom:2rem;">
+      <div class="section-label" data-vi="VỀ TÔI" data-en="ABOUT ME">VỀ TÔI</div>
+      <h2 class="section-title" data-vi="Xin chào, tôi là Khánh Linh" data-en="Hi, I'm Khanh Linh">Xin chào, tôi là Khánh Linh</h2>
+      <div class="glow-divider"></div>
+      <p data-vi="Tôi là Social Media Freelancer với niềm đam mê sáng tạo nội dung và xây dựng cộng đồng trực tuyến. Tốt nghiệp ngành Digital Marketing tại RMIT Việt Nam, tôi có nền tảng vững chắc về chiến lược nội dung, seeding và quảng cáo mạng xã hội."
+         data-en="I am a Social Media Freelancer passionate about content creation and online community building. A Digital Marketing graduate from RMIT Vietnam, I have a solid foundation in content strategy, seeding, and social media advertising.">
+        Tôi là Social Media Freelancer với niềm đam mê sáng tạo nội dung và xây dựng cộng đồng trực tuyến. Tốt nghiệp ngành Digital Marketing tại RMIT Việt Nam, tôi có nền tảng vững chắc về chiến lược nội dung, seeding và quảng cáo mạng xã hội.
+      </p>
+      <p data-vi="Tôi đã làm việc với nhiều lĩnh vực khác nhau: giáo dục quốc tế, nhà hàng, công nghệ AI và resort – mang lại góc nhìn đa dạng và khả năng thích ứng nhanh với mọi ngành hàng."
+         data-en="I have worked across diverse sectors including international education, F&B, AI technology, and resort hospitality – bringing versatile perspectives and fast adaptability to any industry.">
+        Tôi đã làm việc với nhiều lĩnh vực khác nhau: giáo dục quốc tế, nhà hàng, công nghệ AI và resort – mang lại góc nhìn đa dạng và khả năng thích ứng nhanh với mọi ngành hàng.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="section-label" data-vi="KINH NGHIỆM" data-en="EXPERIENCE">KINH NGHIỆM</div>
+  <h2 class="section-title" data-vi="Kinh nghiệm làm việc" data-en="Work Experience">Kinh nghiệm làm việc</h2>
+  <div class="glow-divider"></div>
+  <div class="timeline">
+
+    <div class="tl-item fade-in">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-date" data-vi="03/2026 – Hiện tại" data-en="03/2026 – Present">03/2026 – Hiện tại</div>
+        <div class="tl-company">Priorbay Resort</div>
+        <div class="tl-role" data-vi="Marketing Freelancer" data-en="Marketing Freelancer">Marketing Freelancer</div>
+        <ul class="tl-bullets">
+          <li data-vi="Lên kế hoạch và sản xuất nội dung đa phương tiện (bài viết, video ngắn) cho Facebook, TikTok, Website."
+              data-en="Plan and produce multimedia content (posts, short videos) for Facebook, TikTok, and Website.">
+            Lên kế hoạch và sản xuất nội dung đa phương tiện (bài viết, video ngắn) cho Facebook, TikTok, Website.
+          </li>
+          <li data-vi="Trực tiếp triển khai, tối ưu hóa quảng cáo (Ads) trên Facebook để tăng lượt booking."
+              data-en="Directly execute and optimize Facebook Ads campaigns to increase bookings.">
+            Trực tiếp triển khai, tối ưu hóa quảng cáo (Ads) trên Facebook để tăng lượt booking.
+          </li>
+          <li data-vi="Tư vấn dịch vụ, giải đáp thắc mắc và chốt đơn (booking) qua các kênh Social Media."
+              data-en="Consult on services, answer inquiries, and close bookings via Social Media channels.">
+            Tư vấn dịch vụ, giải đáp thắc mắc và chốt đơn (booking) qua các kênh Social Media.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-date" data-vi="03/2025 – Hiện tại" data-en="03/2025 – Present">03/2025 – Hiện tại</div>
+        <div class="tl-company">Nhà hàng Chilli Basil</div>
+        <div class="tl-role" data-vi="Social Media Freelancer" data-en="Social Media Freelancer">Social Media Freelancer</div>
+        <ul class="tl-bullets">
+          <li data-vi="Sáng tạo nội dung post, video ngắn và visual social media."
+              data-en="Create post content, short videos, and social media visuals.">
+            Sáng tạo nội dung post, video ngắn và visual social media.
+          </li>
+          <li data-vi="Thiết kế hình ảnh social cơ bản bằng Canva."
+              data-en="Design basic social media graphics using Canva.">
+            Thiết kế hình ảnh social cơ bản bằng Canva.
+          </li>
+          <li data-vi="Quản lý Instagram page, hỗ trợ tăng tương tác tự nhiên."
+              data-en="Manage Instagram page and support organic engagement growth.">
+            Quản lý Instagram page, hỗ trợ tăng tương tác tự nhiên.
+          </li>
+          <li data-vi="Phối hợp với team để đảm bảo nội dung đúng tone & định hướng thương hiệu."
+              data-en="Collaborate with the team to ensure content aligns with brand tone and direction.">
+            Phối hợp với team để đảm bảo nội dung đúng tone & định hướng thương hiệu.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-date" data-vi="10/2025 – 12/2025" data-en="10/2025 – 12/2025">10/2025 – 12/2025</div>
+        <div class="tl-company">Salestify AI</div>
+        <div class="tl-role" data-vi="Content Marketing" data-en="Content Marketing">Content Marketing</div>
+        <ul class="tl-bullets">
+          <li data-vi="Viết bài chuẩn SEO cho website."
+              data-en="Write SEO-optimized articles for the website.">
+            Viết bài chuẩn SEO cho website.
+          </li>
+          <li data-vi="Tạo nội dung post, video, hình ảnh cho Facebook & Instagram."
+              data-en="Create post content, videos, and images for Facebook & Instagram.">
+            Tạo nội dung post, video, hình ảnh cho Facebook & Instagram.
+          </li>
+          <li data-vi="Hỗ trợ quản lý tài khoản mạng xã hội và tương tác với người dùng."
+              data-en="Assist in managing social media accounts and engaging with users.">
+            Hỗ trợ quản lý tài khoản mạng xã hội và tương tác với người dùng.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-date" data-vi="03/2025 – 01/2025" data-en="03/2025 – 01/2025">03/2025 – 01/2025</div>
+        <div class="tl-company">1ON Solutions</div>
+        <div class="tl-role" data-vi="Social Media Executive | Content Marketing" data-en="Social Media Executive | Content Marketing">Social Media Executive | Content Marketing</div>
+        <ul class="tl-bullets">
+          <li data-vi="Lên kế hoạch và triển khai nội dung cho Facebook & TikTok theo tuần."
+              data-en="Plan and execute weekly content for Facebook & TikTok.">
+            Lên kế hoạch và triển khai nội dung cho Facebook & TikTok theo tuần.
+          </li>
+          <li data-vi="Viết caption, xây dựng nội dung bắt trend, phù hợp insight người dùng."
+              data-en="Write captions and trending content aligned with user insights.">
+            Viết caption, xây dựng nội dung bắt trend, phù hợp insight người dùng.
+          </li>
+          <li data-vi="Thực hiện seeding nội dung: comment định hướng, kích hoạt thảo luận tự nhiên."
+              data-en="Execute content seeding: directional comments, activating organic discussions.">
+            Thực hiện seeding nội dung: comment định hướng, kích hoạt thảo luận tự nhiên.
+          </li>
+          <li data-vi="Trả lời bình luận và tin nhắn trực tiếp của khách hàng."
+              data-en="Respond to comments and direct messages from customers.">
+            Trả lời bình luận và tin nhắn trực tiếp của khách hàng.
+          </li>
+          <li data-vi="Theo dõi tương tác cơ bản (like, comment, reach) và báo cáo hàng tuần."
+              data-en="Monitor basic engagement metrics (likes, comments, reach) and report weekly.">
+            Theo dõi tương tác cơ bản (like, comment, reach) và báo cáo hàng tuần.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item fade-in">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-date" data-vi="10/2024 – 02/2025" data-en="10/2024 – 02/2025">10/2024 – 02/2025</div>
+        <div class="tl-company">ISP Vietnam – Hanoi Toronto School & Westlink International School</div>
+        <div class="tl-role" data-vi="Family Engagement Assistant" data-en="Family Engagement Assistant">Family Engagement Assistant</div>
+        <ul class="tl-bullets">
+          <li data-vi="Gọi điện tư vấn cho phụ huynh về chương trình học và môi trường giáo dục."
+              data-en="Call and advise parents on the school curriculum and educational environment.">
+            Gọi điện tư vấn cho phụ huynh về chương trình học và môi trường giáo dục.
+          </li>
+          <li data-vi="Dẫn phụ huynh tham quan trường (school tour)."
+              data-en="Conduct school tours for prospective parents.">
+            Dẫn phụ huynh tham quan trường (school tour).
+          </li>
+          <li data-vi="Tham gia và hỗ trợ tổ chức các event tuyển sinh, open day của trường."
+              data-en="Participate in and support the organization of admission events and open days.">
+            Tham gia và hỗ trợ tổ chức các event tuyển sinh, open day của trường.
+          </li>
+          <li data-vi="Thực hiện các công việc hành chính và giấy tờ cơ bản."
+              data-en="Handle basic administrative and paperwork duties.">
+            Thực hiện các công việc hành chính và giấy tờ cơ bản.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="section-label" data-vi="KỸ NĂNG" data-en="SKILLS">KỸ NĂNG</div>
+  <h2 class="section-title" data-vi="Kỹ năng chuyên môn" data-en="Core Skills">Kỹ năng chuyên môn</h2>
+  <div class="glow-divider"></div>
+  <div class="skills-grid">
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-calendar-alt"></i></div>
+      <div class="skill-name" data-vi="Lên kế hoạch nội dung" data-en="Content Planning">Lên kế hoạch nội dung</div>
+      <p class="skill-desc" data-vi="Lên kế hoạch & triển khai nội dung Social Media theo tuần/tháng theo KPI."
+                            data-en="Plan & execute weekly/monthly Social Media content according to KPIs.">
+        Lên kế hoạch & triển khai nội dung Social Media theo tuần/tháng theo KPI.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-pen-nib"></i></div>
+      <div class="skill-name" data-vi="Viết nội dung & Seeding" data-en="Copywriting & Seeding">Viết nội dung & Seeding</div>
+      <p class="skill-desc" data-vi="Viết caption, nội dung seeding, comment định hướng kích hoạt thảo luận tự nhiên."
+                            data-en="Write captions, seeding content, and directional comments to spark organic discussions.">
+        Viết caption, nội dung seeding, comment định hướng kích hoạt thảo luận tự nhiên.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-fire"></i></div>
+      <div class="skill-name" data-vi="Bắt trend & Insight" data-en="Trend & Insight">Bắt trend & Insight</div>
+      <p class="skill-desc" data-vi="Nhanh nhạy bắt trend, hiểu insight người dùng để tạo nội dung đúng thời điểm."
+                            data-en="Quickly spot trends and understand user insights to create timely content.">
+        Nhanh nhạy bắt trend, hiểu insight người dùng để tạo nội dung đúng thời điểm.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-palette"></i></div>
+      <div class="skill-name" data-vi="Thiết kế hình ảnh" data-en="Graphic Design">Thiết kế hình ảnh</div>
+      <p class="skill-desc" data-vi="Thiết kế hình ảnh social media cơ bản bằng Canva và Adobe Illustrator."
+                            data-en="Design basic social media graphics using Canva and Adobe Illustrator.">
+        Thiết kế hình ảnh social media cơ bản bằng Canva và Adobe Illustrator.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-video"></i></div>
+      <div class="skill-name" data-vi="Edit Video" data-en="Video Editing">Edit Video</div>
+      <p class="skill-desc" data-vi="Chỉnh sửa video ngắn bằng CapCut phục vụ TikTok, Reels và Facebook."
+                            data-en="Edit short-form videos using CapCut for TikTok, Reels, and Facebook.">
+        Chỉnh sửa video ngắn bằng CapCut phục vụ TikTok, Reels và Facebook.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+      <div class="skill-name" data-vi="Quản lý & Báo cáo" data-en="Management & Reporting">Quản lý & Báo cáo</div>
+      <p class="skill-desc" data-vi="Quản lý fanpage/Instagram, theo dõi tương tác và báo cáo social hàng tuần."
+                            data-en="Manage fanpage/Instagram, track engagement, and deliver weekly social reports.">
+        Quản lý fanpage/Instagram, theo dõi tương tác và báo cáo social hàng tuần.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-search"></i></div>
+      <div class="skill-name" data-vi="SEO Content" data-en="SEO Content">SEO Content</div>
+      <p class="skill-desc" data-vi="Viết bài chuẩn SEO cho website, tối ưu từ khóa và cấu trúc nội dung."
+                            data-en="Write SEO-optimized website articles with keyword optimization and content structure.">
+        Viết bài chuẩn SEO cho website, tối ưu từ khóa và cấu trúc nội dung.
+      </p>
+    </div>
+
+    <div class="skill-card fade-in">
+      <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
+      <div class="skill-name" data-vi="Facebook Ads" data-en="Facebook Ads">Facebook Ads</div>
+      <p class="skill-desc" data-vi="Triển khai và tối ưu quảng cáo Facebook nhằm tăng lượt tiếp cận và chuyển đổi."
+                            data-en="Execute and optimize Facebook Ads campaigns to increase reach and conversions.">
+        Triển khai và tối ưu quảng cáo Facebook nhằm tăng lượt tiếp cận và chuyển đổi.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== TOOLS ===== -->
+<section id="tools">
+  <div class="section-label" data-vi="CÔNG CỤ" data-en="TOOLS">CÔNG CỤ</div>
+  <h2 class="section-title" data-vi="Công cụ sử dụng" data-en="Tools I Use">Công cụ sử dụng</h2>
+  <div class="glow-divider"></div>
+  <div class="tools-wrap fade-in">
+    <div class="tool-chip"><i class="fas fa-wand-magic-sparkles"></i> Canva</div>
+    <div class="tool-chip"><i class="fas fa-film"></i> CapCut</div>
+    <div class="tool-chip"><i class="fab fa-adobe"></i> Adobe Illustrator</div>
+    <div class="tool-chip"><i class="fas fa-robot"></i> ChatGPT</div>
+    <div class="tool-chip"><i class="fas fa-robot"></i> Gemini</div>
+    <div class="tool-chip"><i class="fas fa-robot"></i> Claude</div>
+    <div class="tool-chip"><i class="fas fa-robot"></i> Grok</div>
+    <div class="tool-chip"><i class="fab fa-facebook"></i> Facebook</div>
+    <div class="tool-chip"><i class="fab fa-tiktok"></i> TikTok</div>
+    <div class="tool-chip"><i class="fab fa-instagram"></i> Instagram</div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <div class="section-label" data-vi="HỌC VẤN" data-en="EDUCATION">HỌC VẤN</div>
+  <h2 class="section-title" data-vi="Học vấn" data-en="Education">Học vấn</h2>
+  <div class="glow-divider"></div>
+
+  <div class="edu-card fade-in" style="margin-bottom:3rem;">
+    <div class="edu-logo">R</div>
+    <div>
+      <div class="edu-degree" data-vi="Cử nhân Digital Marketing" data-en="Bachelor of Digital Marketing">Cử nhân Digital Marketing</div>
+      <div class="edu-school">RMIT University Vietnam</div>
+      <div class="edu-years">2021 – 2025</div>
+      <ul class="edu-bullets">
+        <li data-vi="Học theo mô hình thực hành, làm việc trực tiếp với các case và khách hàng thực tế."
+            data-en="Hands-on learning model, working directly with real-world cases and clients.">
+          Học theo mô hình thực hành, làm việc trực tiếp với các case và khách hàng thực tế.
+        </li>
+        <li data-vi="Tham gia nhiều bài tập nhóm được nominate vào vòng pitching."
+            data-en="Participated in multiple group projects nominated to pitching rounds.">
+          Tham gia nhiều bài tập nhóm được nominate vào vòng pitching.
+        </li>
+        <li data-vi="Thực hiện dự án pitching KYONS – ứng dụng AI hỗ trợ xây dựng lộ trình học cá nhân hoá nhằm giúp người học đạt mục tiêu điểm số mong muốn."
+            data-en="Led the KYONS pitching project – an AI app that builds personalized learning roadmaps to help students achieve target scores.">
+          Thực hiện dự án pitching KYONS – ứng dụng AI hỗ trợ xây dựng lộ trình học cá nhân hoá nhằm giúp người học đạt mục tiêu điểm số mong muốn.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LANGUAGES + EXTRACURRICULAR under education section -->
+  <div class="section-label" style="margin-top:1rem;" data-vi="NGOẠI NGỮ" data-en="LANGUAGES">NGOẠI NGỮ</div>
+  <h2 class="section-title" style="margin-bottom:1.5rem;" data-vi="Ngôn ngữ" data-en="Languages">Ngôn ngữ</h2>
+  <div class="glow-divider"></div>
+  <div class="lang-row fade-in">
+    <div class="lang-card">
+      <span class="lang-flag">🇻🇳</span>
+      <div>
+        <div class="lang-name" data-vi="Tiếng Việt" data-en="Vietnamese">Tiếng Việt</div>
+        <div class="lang-level" data-vi="Bản ngữ" data-en="Native">Bản ngữ</div>
+      </div>
+    </div>
+    <div class="lang-card">
+      <span class="lang-flag">🇬🇧</span>
+      <div>
+        <div class="lang-name" data-vi="Tiếng Anh" data-en="English">Tiếng Anh</div>
+        <div class="lang-level" data-vi="Thành thạo" data-en="Proficient">Thành thạo</div>
+      </div>
+    </div>
+    <div class="lang-card">
+      <span class="lang-flag">🇰🇷</span>
+      <div>
+        <div class="lang-name" data-vi="Tiếng Hàn" data-en="Korean">Tiếng Hàn</div>
+        <div class="lang-level" data-vi="Cơ bản" data-en="Basic">Cơ bản</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:2rem;" data-vi="NGOẠI KHOÁ" data-en="EXTRACURRICULAR">NGOẠI KHOÁ</div>
+  <h2 class="section-title" style="margin-bottom:1.5rem;" data-vi="Hoạt động ngoại khoá" data-en="Extracurricular Activities">Hoạt động ngoại khoá</h2>
+  <div class="glow-divider"></div>
+  <div class="extra-card fade-in">
+    <div class="extra-header">
+      <div>
+        <div class="extra-role" data-vi="Event Member" data-en="Event Member">Event Member</div>
+        <div class="extra-org" data-vi="Student Ambassador Team – RMIT Vietnam" data-en="Student Ambassador Team – RMIT Vietnam">Student Ambassador Team – RMIT Vietnam</div>
+      </div>
+      <div class="extra-date" data-vi="02/2022 – 06/2024" data-en="02/2022 – 06/2024">02/2022 – 06/2024</div>
+    </div>
+    <ul class="extra-bullets">
+      <li data-vi="Tư vấn trực tiếp và online cho phụ huynh & học sinh về chương trình học, môi trường quốc tế và chính sách trao đổi sinh viên."
+          data-en="Provided direct and online counseling for parents & students on curriculum, international environment, and student exchange policies.">
+        Tư vấn trực tiếp và online cho phụ huynh & học sinh về chương trình học, môi trường quốc tế và chính sách trao đổi sinh viên.
+      </li>
+      <li data-vi="Dẫn tour campus cho phụ huynh và học sinh trong các sự kiện tuyển sinh."
+          data-en="Conducted campus tours for parents and students during admission events.">
+        Dẫn tour campus cho phụ huynh và học sinh trong các sự kiện tuyển sinh.
+      </li>
+      <li data-vi="Tham gia tổ chức và hỗ trợ các event lớn của trường."
+          data-en="Participated in organizing and supporting major university events.">
+        Tham gia tổ chức và hỗ trợ các event lớn của trường.
+      </li>
+      <li data-vi="Phối hợp sản xuất nội dung (chụp ảnh, quay video, chỉnh sửa) cho TikTok & fanpage trường."
+          data-en="Collaborated on content production (photography, video filming, editing) for the university's TikTok & fanpage.">
+        Phối hợp sản xuất nội dung (chụp ảnh, quay video, chỉnh sửa) cho TikTok & fanpage trường.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center;" data-vi="LIÊN HỆ" data-en="CONTACT">LIÊN HỆ</div>
+  <h2 class="section-title" style="text-align:center;" data-vi="Hãy kết nối với tôi" data-en="Let's Connect">Hãy kết nối với tôi</h2>
+  <div class="glow-divider" style="margin:0 auto 3rem;"></div>
+  <div class="contact-box fade-in">
+    <p class="contact-desc"
+       data-vi="Bạn đang tìm kiếm freelancer Social Media hoặc Content Marketing? Tôi luôn sẵn sàng hợp tác! Hãy liên hệ để chúng ta cùng trao đổi nhé."
+       data-en="Looking for a Social Media Freelancer or Content Marketing specialist? I'm always open to collaboration! Feel free to reach out and let's talk.">
+      Bạn đang tìm kiếm freelancer Social Media hoặc Content Marketing? Tôi luôn sẵn sàng hợp tác! Hãy liên hệ để chúng ta cùng trao đổi nhé.
+    </p>
+    <div class="contact-links">
+      <a href="tel:0349486455" class="contact-link">
+        <i class="fas fa-phone"></i> 0349 486 455
+      </a>
+      <a href="mailto:klinh180802@gmail.com" class="contact-link">
+        <i class="fas fa-envelope"></i> klinh180802@gmail.com
+      </a>
+      <span class="contact-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span data-vi="Nhà Bè, TP. Hồ Chí Minh" data-en="Nha Be, Ho Chi Minh City">Nhà Bè, TP. Hồ Chí Minh</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 <span>Le Thi Khanh Linh</span>. <span data-vi="Thiết kế với" data-en="Designed with">Thiết kế với</span> <span style="color:var(--pink)">♥</span></p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
