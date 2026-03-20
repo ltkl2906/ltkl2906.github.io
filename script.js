@@ -63,7 +63,7 @@
     if (navbar) {
       window.addEventListener('scroll', function () {
         navbar.style.boxShadow =
-          window.scrollY > 40 ? '0 4px 30px rgba(233,30,140,0.1)' : 'none';
+          window.scrollY > 40 ? '0 4px 24px rgba(171, 71, 36, 0.08)' : 'none';
       });
     }
   });
