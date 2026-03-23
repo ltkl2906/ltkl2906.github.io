@@ -419,6 +419,8 @@ section { padding: 100px 5%; }
 .pf-card:active { transform: scale(0.97); }
 
 .pf-card--fb { background: linear-gradient(160deg, #b8cce8 0%, #a8b8d8 40%, #8fa0c4 100%); }
+.pf-card--teal { background: linear-gradient(160deg, #b8dcd0 0%, #8cc0b0 40%, #6ca498 100%); }
+.pf-card--ig { background: linear-gradient(160deg, #f0c0d8 0%, #d890b8 40%, #b060a0 100%); }
 
 .pf-card-bg {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
@@ -461,6 +463,7 @@ section { padding: 100px 5%; }
   backdrop-filter: blur(4px);
 }
 .pf-badge--fb { background: rgba(24, 119, 242, 0.6); }
+.pf-badge--ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
 .pf-card-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
 .pf-card-sub { font-size: 0.78rem; color: rgba(255, 255, 255, 0.8); }
 
