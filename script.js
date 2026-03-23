@@ -86,49 +86,24 @@
       });
     });
 
-    /* ---- Load Thumbnails via oEmbed ---- */
+    /* ---- Load Thumbnails (oEmbed fallback for cards without local thumb) ---- */
     pfCards.forEach(function (card) {
+      if (card.querySelector('.pf-card-thumb')) { return; }
       var videoUrl = card.dataset.videoUrl;
-      var externalUrl = card.dataset.externalUrl;
-
-      if (videoUrl) {
-        fetch('https://www.tiktok.com/oembed?url=' + encodeURIComponent(videoUrl))
-          .then(function (res) { return res.json(); })
-          .then(function (data) {
-            if (data.thumbnail_url) {
-              var img = document.createElement('img');
-              img.className = 'pf-card-thumb';
-              img.alt = data.title || 'TikTok video';
-              img.onload = function () { img.classList.add('loaded'); };
-              img.src = data.thumbnail_url;
-              card.appendChild(img);
-
-              if (data.title) {
-                var titleEl = card.querySelector('.pf-card-title');
-                if (titleEl) {
-                  titleEl.textContent = data.title.length > 50
-                    ? data.title.substring(0, 50) + '\u2026'
-                    : data.title;
-                }
-              }
-            }
-          })
-          .catch(function () {});
-      }
-
-      if (externalUrl && externalUrl.includes('facebook.com')) {
-        var pageName = externalUrl.split('facebook.com/')[1];
-        if (pageName) {
-          var img = document.createElement('img');
-          img.className = 'pf-card-thumb';
-          img.alt = 'PriorBay Resort';
-          img.onload = function () { img.classList.add('loaded'); };
-          img.onerror = function () { this.remove(); };
-          img.src = 'https://graph.facebook.com/' +
-            encodeURIComponent(pageName) + '/picture?type=large&redirect=true&width=720&height=720';
-          card.appendChild(img);
-        }
-      }
+      if (!videoUrl) { return; }
+      fetch('https://www.tiktok.com/oembed?url=' + encodeURIComponent(videoUrl))
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.thumbnail_url) {
+            var img = document.createElement('img');
+            img.className = 'pf-card-thumb';
+            img.alt = data.title || 'TikTok video';
+            img.onload = function () { img.classList.add('loaded'); };
+            img.src = data.thumbnail_url;
+            card.appendChild(img);
+          }
+        })
+        .catch(function () {});
     });
 
     /* ---- Video Modal ---- */
@@ -137,12 +112,11 @@
     var modalClose = document.getElementById('vmClose');
     var modalExternal = document.getElementById('vmExternal');
 
-    function openVideoModal(videoId, videoUrl) {
-      var loader = '<div class="vm-loader"><div class="vm-spinner"></div></div>';
-      var iframe = '<iframe src="https://www.tiktok.com/embed/v2/' + videoId +
-        '" allowfullscreen allow="encrypted-media"></iframe>';
-      modalFrame.innerHTML = loader + iframe;
-      modalExternal.href = videoUrl;
+    function openVideoModal(localSrc, tiktokUrl) {
+      var video = '<video controls playsinline autoplay>' +
+        '<source src="' + localSrc + '" type="video/mp4"></video>';
+      modalFrame.innerHTML = video;
+      modalExternal.href = tiktokUrl;
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -150,6 +124,8 @@
     function closeVideoModal() {
       modal.classList.remove('active');
       document.body.style.overflow = '';
+      var vid = modalFrame.querySelector('video');
+      if (vid) { vid.pause(); }
       setTimeout(function () {
         modalFrame.innerHTML = '<div class="vm-loader"><div class="vm-spinner"></div></div>';
       }, 350);
@@ -157,12 +133,14 @@
 
     pfCards.forEach(function (card) {
       card.addEventListener('click', function () {
-        var videoId = card.dataset.videoId;
+        var localVideo = card.dataset.localVideo;
         var videoUrl = card.dataset.videoUrl;
         var externalUrl = card.dataset.externalUrl;
 
-        if (videoId && videoUrl) {
-          openVideoModal(videoId, videoUrl);
+        if (localVideo) {
+          openVideoModal(localVideo, videoUrl);
+        } else if (videoUrl) {
+          window.open(videoUrl, '_blank', 'noopener');
         } else if (externalUrl) {
           window.open(externalUrl, '_blank', 'noopener');
         }
