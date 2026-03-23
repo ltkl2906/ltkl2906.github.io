@@ -112,13 +112,23 @@
     var modalClose = document.getElementById('vmClose');
     var modalExternal = document.getElementById('vmExternal');
 
-    function openVideoModal(localSrc, tiktokUrl) {
-      var video = '<video controls playsinline autoplay>' +
-        '<source src="' + localSrc + '" type="video/mp4"></video>';
-      modalFrame.innerHTML = video;
-      modalExternal.href = tiktokUrl;
+    function showModal(tiktokUrl) {
+      modalExternal.href = tiktokUrl || '#';
+      modalExternal.style.display = tiktokUrl ? '' : 'none';
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
+    }
+
+    function openLocalVideo(localSrc, tiktokUrl) {
+      modalFrame.innerHTML = '<video controls playsinline autoplay>' +
+        '<source src="' + localSrc + '" type="video/mp4"></video>';
+      showModal(tiktokUrl);
+    }
+
+    function openTikTokEmbed(videoId, tiktokUrl) {
+      modalFrame.innerHTML = '<iframe src="https://www.tiktok.com/embed/v2/' +
+        videoId + '" allowfullscreen allow="encrypted-media"></iframe>';
+      showModal(tiktokUrl);
     }
 
     function closeVideoModal() {
@@ -134,13 +144,14 @@
     pfCards.forEach(function (card) {
       card.addEventListener('click', function () {
         var localVideo = card.dataset.localVideo;
+        var videoId = card.dataset.videoId;
         var videoUrl = card.dataset.videoUrl;
         var externalUrl = card.dataset.externalUrl;
 
         if (localVideo) {
-          openVideoModal(localVideo, videoUrl);
-        } else if (videoUrl) {
-          window.open(videoUrl, '_blank', 'noopener');
+          openLocalVideo(localVideo, videoUrl);
+        } else if (videoId) {
+          openTikTokEmbed(videoId, videoUrl);
         } else if (externalUrl) {
           window.open(externalUrl, '_blank', 'noopener');
         }
