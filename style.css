@@ -555,7 +555,7 @@ footer span { color: var(--terracotta); }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .about-visual { order: -1; }
+  .about-visual { order: -1; margin-bottom: 90px; }
 }
 @media (max-width: 700px) {
   .nav-links {
